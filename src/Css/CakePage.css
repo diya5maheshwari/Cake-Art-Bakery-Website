@@ -1,0 +1,323 @@
+.cake-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cakes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+.container h2 {
+    /* animation: titleBounce 1s ease-out; */
+position: relative;
+    font-size: 3.5rem;
+    color: #ff6b35;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container h2::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b35, #ffd93d);
+    border-radius: 2px;
+}
+
+/* @keyframes titleBounce {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+} */
+
+.container h2:hover {
+    color: #e4782c;
+    transform: scale(1.05);
+}
+
+.container p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #666;
+    animation: fadeIn 1s ease-out 0.3s both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Cake Card - Fixed Animation */
+.cake-card {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    width: 380px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    margin: auto;
+    background: white;
+    position: relative;
+    overflow: hidden;
+    
+    /* Only entrance animation - no continuous animation */
+    animation: cardEntrance 0.8s ease-out both;
+}
+
+/* Staggered Entrance Only */
+.cake-card:nth-child(1) { animation-delay: 0.1s; }
+.cake-card:nth-child(2) { animation-delay: 0.2s; }
+.cake-card:nth-child(3) { animation-delay: 0.3s; }
+.cake-card:nth-child(4) { animation-delay: 0.4s; }
+.cake-card:nth-child(5) { animation-delay: 0.5s; }
+.cake-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes cardEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+    80% {
+        transform: translateY(-5px) scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Hover Effects - SIMPLIFIED */
+.cake-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.15),
+        0 0 0 2px rgba(228, 120, 44, 0.1);
+    background: linear-gradient(135deg, #ffffff 0%, #fffaf5 100%);
+}
+
+/* Image Animation */
+.cake-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: all 0.4s ease;
+    filter: brightness(0.95);
+}
+
+.cake-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Text Animations */
+.cake-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.cake-card:hover h3 {
+    color: #e4782c;
+}
+
+.cake-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(45deg, #e4782c, #954069);
+    transition: transform 0.3s ease;
+}
+
+.cake-card:hover h3::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.cake-card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+.cake-card .cake-price{
+    font-size: 18px;
+    color:blue;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+/* Button Animations */
+.cake-card button {
+    background: linear-gradient(45deg, #ff7b1c, #ff2720);
+    /* background: linear-gradient(45deg, #e4782c, #954069); */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(228, 120, 44, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.cake-card button:hover {
+    background: linear-gradient(45deg, #d46a25, #85385e);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(149, 64, 105, 0.4);
+}
+
+.cake-card button:active {
+    transform: translateY(0);
+}
+
+/* Simple Floating Animation (Optional) - Remove if still issues */
+@keyframes gentleFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* If you want gentle floating, use this class separately */
+.cake-card.floating {
+    animation: 
+        cardEntrance 0.8s ease-out both,
+        gentleFloat 4s ease-in-out infinite;
+}
+
+.cake-card.floating:nth-child(1) { animation-delay: 0.1s, 0s; }
+.cake-card.floating:nth-child(2) { animation-delay: 0.2s, 1s; }
+.cake-card.floating:nth-child(3) { animation-delay: 0.3s, 2s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cake-card {
+        width: 100%;
+        max-width: 350px;
+        animation: cardEntrance 0.6s ease-out both;
+    }
+    
+    .cake-card:hover {
+        transform: translateY(-5px) scale(1.02);
+    }
+    
+    .container h2 {
+        font-size: 28px;
+    }
+}
+
+
+
+
+/* CakeCard Styles */
+.cake-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.cake-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.cake-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.cake-card h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.cake-card p {
+  color: #5d6d7e;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* HashLink Button Styles */
+.view-collection-btn {
+  display: inline-block;
+  background: #e4782c;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.view-collection-btn:hover {
+  background: #d46a25;
+  transform: translateY(-2px);
+  color: white;
+  text-decoration: none;
+}

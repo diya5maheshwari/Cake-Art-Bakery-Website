@@ -1,0 +1,112 @@
+/* Category Page Styles - Improved */
+.category-page {
+  padding: 80px 20px 40px;
+  background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+  min-height: 100vh;
+}
+
+.category-header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.category-header h1 {
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.category-header p {
+  font-size: 1.2rem;
+  color: #5d6d7e;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive Design for Category Pages */
+@media (max-width: 768px) {
+  .category-page {
+    padding: 60px 15px 30px;
+  }
+  
+  .category-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .category-header p {
+    font-size: 1rem;
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+
+
+/* Button Styles for HashLink */
+.cards-order-btn-link {
+  display: inline-block;
+  background: #e4782c;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 10px;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+}
+
+.cards-order-btn-link:hover {
+  background: #d46a25;
+  transform: translateY(-2px);
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+.category-page {
+  background: var(--bg-secondary);
+  min-height: 100vh;
+}
+
+.category-header h1 {
+  color: var(--text-primary);
+}
+
+.category-header p {
+  color: var(--text-secondary);
+}

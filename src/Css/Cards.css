@@ -1,0 +1,171 @@
+/* Cards Component Styles - Simple & Elegant */
+.cards-cake-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin: 15px auto;
+  border: 1px solid #f0f0f0;
+}
+
+/* Simple Entrance Animation */
+.cards-cake-card {
+  animation: cardsFadeIn 0.6s ease-out;
+}
+
+@keyframes cardsFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle Hover Effects */
+.cards-cake-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Image Styles - Larger Size */
+.cards-cake-card img {
+  width: 100%;
+  height: 250px; /* Increased image height */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.cards-cake-card:hover img {
+  transform: scale(1.03);
+}
+
+/* Title Styles */
+.cards-cake-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Description Styles */
+.cards-cake-card p {
+  font-size: 0.95rem;
+  color: #5d6d7e;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Price Styles */
+.cards-cake-price {
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  color: #e74c3c !important;
+  margin: 15px 0 !important;
+}
+
+/* Button Styles - Simple */
+.cards-order-btn {
+  background: #e4782c;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.cards-order-btn:hover {
+  background: #d46a25;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .cards-cake-card {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-cake-card {
+    max-width: 280px;
+    padding: 15px;
+    margin: 10px auto;
+  }
+  
+  .cards-cake-card img {
+    height: 220px; /* Maintain larger size on mobile */
+  }
+  
+  .cards-cake-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .cards-cake-card p {
+    font-size: 0.9rem;
+  }
+  
+  .cards-cake-price {
+    font-size: 1.3rem !important;
+  }
+  
+  .cards-order-btn {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-cake-card {
+    max-width: 100%;
+    padding: 15px;
+  }
+  
+  .cards-cake-card img {
+    height: 200px; /* Still good size on small screens */
+  }
+  
+  .cards-cake-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .cards-cake-price {
+    font-size: 1.2rem !important;
+  }
+}
+
+
+
+.cards-cake-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+.cards-cake-card h3 {
+  color: var(--text-primary);
+}
+
+.cards-cake-card p {
+  color: var(--text-secondary);
+}
